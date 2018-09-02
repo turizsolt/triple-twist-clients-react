@@ -1,9 +1,16 @@
 import * as React from 'react';
 import './App.css';
-
 import logo from './logo.svg';
+import {Server} from "./api/Server";
 
-class App extends React.Component {
+class App extends React.Component<{}> {
+    constructor(props:{}) {
+        super(props);
+
+        const server = new Server();
+        server.foo();
+    }
+
   public render() {
     return (
       <div className="App">
